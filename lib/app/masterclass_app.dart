@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../modules/activities/ui/activities_page.dart';
 import 'theme/theme.dart' as app_theme;
 
 class MasterclassApp extends StatelessWidget {
@@ -11,7 +12,7 @@ class MasterclassApp extends StatelessWidget {
       theme: app_theme.lightTheme,
       darkTheme: app_theme.darkTheme,
       themeMode: ThemeMode.dark,
-      home: Container(color: Colors.blue),
+      home: const ActivitiesPage(),
     );
   }
 }
