@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../../commons/widgets/my_app_bar.dart';
 import '../../../commons/widgets/sliver_gap.dart';
+import '../../../utils/service_locator/service_locator.dart';
+import '../../../utils/services/url_launcher.dart';
 import '../data/activities_data.dart' as activities_data;
 import 'widgets/activity_card.dart';
 
@@ -24,13 +26,13 @@ class ActivitiesPage extends StatelessWidget {
                 final activity = activities_data.activies[index];
 
                 return ActivityCard(
-                  title: activity.title,
-                  iconPath: activity.iconPath,
-                  description: activity.description,
-                  exercicesCount: activity.exercicesCount,
+                  activity: activity,
                   margin: const EdgeInsets.symmetric(horizontal: 16),
                   onTapSeeMore: () {},
-                  onTapAccessCode: () {},
+                  onTapAccessCode: () {
+                    final launcher = serviceLocator.get<UrlLauncher>();
+                    launcher.launchUrl(activity.repoUrl);
+                  },
                 );
               },
               separatorBuilder: (_, __) => const SizedBox(height: 16),

@@ -3,21 +3,16 @@ import 'package:flutter_svg/svg.dart';
 
 import '../../../../utils/assets.dart' as assets;
 import '../../../../utils/extensions/context_extensions.dart';
+import '../../model/activity.dart';
 
 class ActivityCard extends StatelessWidget {
-  final String title;
-  final String iconPath;
+  final Activity activity;
   final EdgeInsets? margin;
-  final String description;
-  final int exercicesCount;
   final VoidCallback onTapSeeMore;
   final VoidCallback onTapAccessCode;
 
   const ActivityCard({
-    required this.title,
-    required this.iconPath,
-    required this.description,
-    required this.exercicesCount,
+    required this.activity,
     required this.onTapSeeMore,
     required this.onTapAccessCode,
     this.margin,
@@ -49,14 +44,14 @@ class ActivityCard extends StatelessWidget {
                   shape: BoxShape.circle,
                 ),
                 child: SvgPicture.asset(
-                  iconPath,
+                  activity.iconPath,
                   colorFilter: ColorFilter.mode(colors.surface, BlendMode.srcIn),
                 ),
               ),
               const SizedBox(width: 12),
-              Text(title, style: fonts.titleMedium),
+              Text(activity.title, style: fonts.titleMedium),
               const Spacer(),
-              Text('Exercicios: $exercicesCount', style: fonts.bodySmall),
+              Text('Exercicios: ${activity.exercicesCount}', style: fonts.bodySmall),
             ],
           ),
           const SizedBox(height: 36),
@@ -66,7 +61,7 @@ class ActivityCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Text(
-                  description,
+                  activity.description,
                   style: fonts.bodySmall,
                   textAlign: TextAlign.left,
                 ),
@@ -74,6 +69,7 @@ class ActivityCard extends StatelessWidget {
                 Row(
                   children: [
                     TextButton.icon(
+                      key: ValueKey('activity_text_btn_${activity.id}'),
                       style: const ButtonStyle(padding: MaterialStatePropertyAll(EdgeInsets.zero)),
                       icon: SvgPicture.asset(
                         assets.icGithub,

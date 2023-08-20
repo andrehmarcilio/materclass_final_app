@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:masterclass_final_app/modules/activities/model/activity.dart';
 import 'package:masterclass_final_app/modules/activities/ui/widgets/activity_card.dart';
 import 'package:masterclass_final_app/utils/assets.dart';
 
@@ -10,11 +11,17 @@ void main() {
     testWidgets('should display the activity title when instantiated', (tester) async {
       // Arrange
       const activityTitle = 'activity title';
-      final activityCard = ActivityCard(
+      final activity = Activity(
+        id: 1,
         title: activityTitle,
         iconPath: icRunning,
         description: 'card description',
         exercicesCount: 3,
+        repoUrl: 'repoUrl',
+      );
+
+      final activityCard = ActivityCard(
+        activity: activity,
         onTapSeeMore: () {},
         onTapAccessCode: () {},
       );
@@ -29,11 +36,17 @@ void main() {
     testWidgets('should display the activity description when instantiated', (tester) async {
       // Arrange
       const activityDescription = 'activity description';
-      final activityCard = ActivityCard(
-        title: 'activity title',
+      final activity = Activity(
+        id: 1,
+        title: 'activityTitle',
         iconPath: icRunning,
         description: activityDescription,
         exercicesCount: 3,
+        repoUrl: 'repoUrl',
+      );
+
+      final activityCard = ActivityCard(
+        activity: activity,
         onTapSeeMore: () {},
         onTapAccessCode: () {},
       );
@@ -52,11 +65,17 @@ void main() {
         timesInvokedSeeMore++;
       }
 
-      final activityCard = ActivityCard(
-        title: 'activity title',
+      final activity = Activity(
+        id: 1,
+        title: 'activityTitle',
         iconPath: icRunning,
-        description: 'activity description',
+        description: 'activityDescription',
         exercicesCount: 3,
+        repoUrl: 'repoUrl',
+      );
+
+      final activityCard = ActivityCard(
+        activity: activity,
         onTapSeeMore: onTapSeeMore,
         onTapAccessCode: () {},
       );
@@ -77,11 +96,17 @@ void main() {
         timesInvokedAccessCode++;
       }
 
-      final activityCard = ActivityCard(
-        title: 'activity title',
+      final activity = Activity(
+        id: 1,
+        title: 'activityTitle',
         iconPath: icRunning,
-        description: 'activity description',
+        description: 'activityDescription',
         exercicesCount: 3,
+        repoUrl: 'repoUrl',
+      );
+
+      final activityCard = ActivityCard(
+        activity: activity,
         onTapSeeMore: () {},
         onTapAccessCode: onTapAccessCode,
       );
