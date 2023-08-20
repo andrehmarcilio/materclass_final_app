@@ -56,6 +56,8 @@ The activitie component must has:
 
 OBS: The data in this Screen is mocked, so no external requests are made.
 
+<img src="./screenshots/activity_page_screenshot.png" width="200"/>
+
 ## 1.2 List of exercices for each activity (with examples)
 
 A screen that shows the user a List of exercices in the selected activitie. Each exercice is a clickable component. Tapping on an exercise navigates to the example screen.
