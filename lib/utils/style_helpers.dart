@@ -21,8 +21,9 @@ class AppFonts {
   /// Creates an [AppFonts] instance with the provided [context].
   AppFonts(this.context);
 
-  TextStyle? get displayLarge => Theme.of(context).textTheme.displayLarge;
-  TextStyle? get displayMedium => Theme.of(context).textTheme.displayMedium;
+  TextStyle? get titleLarge => Theme.of(context).textTheme.titleLarge;
+  TextStyle? get titleMedium => Theme.of(context).textTheme.titleMedium;
+  TextStyle? get titleSmall => Theme.of(context).textTheme.titleSmall;
   TextStyle? get bodyLarge => Theme.of(context).textTheme.bodyLarge;
   TextStyle? get bodySmall => Theme.of(context).textTheme.bodySmall;
 }
