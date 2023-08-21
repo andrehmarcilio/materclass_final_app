@@ -10,3 +10,9 @@ In this section, we will provide insights into the key patterns and processes th
 4. Use of dependency injection to achieve loose coupling between components (the only exception is the ViewModel layer).
 
 ## Design Patterns
+
+### Service
+
+It involves abstracting and encapsulating specific functionalities or services into separate classes or modules, enhancing code maintainability, reusability, and testability.
+
+In our application, services are organized within the [util](lib/utils) folder. Each service encapsulates a specific functionality and is designed to interact with other components through well-defined interfaces. 

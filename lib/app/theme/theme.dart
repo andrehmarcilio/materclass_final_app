@@ -5,8 +5,9 @@ import 'fonts.dart' as app_fonts;
 
 final darkTheme = ThemeData(
   brightness: Brightness.dark,
-  scaffoldBackgroundColor: app_colors.black,
   textTheme: app_fonts.darkTextTheme,
+  elevatedButtonTheme: _elevationButtonTheme,
+  scaffoldBackgroundColor: app_colors.black,
   colorScheme: const ColorScheme.dark(
     primary: app_colors.blue,
     onPrimary: app_colors.white,
@@ -18,13 +19,28 @@ final darkTheme = ThemeData(
 
 final lightTheme = ThemeData(
   brightness: Brightness.light,
-  scaffoldBackgroundColor: app_colors.vistaWhite,
   textTheme: app_fonts.lightTextTheme,
+  elevatedButtonTheme: _elevationButtonTheme,
+  scaffoldBackgroundColor: app_colors.vistaWhite,
   colorScheme: const ColorScheme.light(
     primary: app_colors.blue,
     onPrimary: app_colors.white,
     surface: app_colors.white,
-    onSurface: app_colors.white,
+    onSurface: app_colors.blackPearl,
     onSurfaceVariant: app_colors.gray,
+  ),
+);
+
+final _elevationButtonTheme = ElevatedButtonThemeData(
+  style: ButtonStyle(
+    elevation: const MaterialStatePropertyAll(0),
+    padding: const MaterialStatePropertyAll(
+      EdgeInsets.symmetric(horizontal: 32, vertical: 8),
+    ),
+    shape: MaterialStatePropertyAll(
+      RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(40),
+      ),
+    ),
   ),
 );

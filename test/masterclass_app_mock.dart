@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:masterclass_final_app/app/theme/theme.dart' as app_theme;
 
-import '../modules/activities/ui/activities_page.dart';
-import 'theme/theme.dart' as app_theme;
+class FlutterandoAppMock extends StatelessWidget {
+  final Widget? view;
 
-class MasterclassApp extends StatelessWidget {
-  const MasterclassApp({super.key});
+  const FlutterandoAppMock({super.key, this.view});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class MasterclassApp extends StatelessWidget {
       theme: app_theme.lightTheme,
       darkTheme: app_theme.darkTheme,
       themeMode: ThemeMode.dark,
-      home: const ActivitiesPage(),
+      home: view,
     );
   }
 }
