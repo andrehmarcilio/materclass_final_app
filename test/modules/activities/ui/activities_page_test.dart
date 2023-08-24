@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:masterclass_final_app/modules/activities/data/activities_data.dart' as activities_data;
 import 'package:masterclass_final_app/modules/activities/ui/activities_page.dart';
+import 'package:masterclass_final_app/modules/exercices/ui/exercices_page.dart';
 import 'package:masterclass_final_app/utils/service_locator/service_locator.dart';
 import 'package:masterclass_final_app/utils/services/url_launcher.dart';
 import 'package:mocktail/mocktail.dart';
@@ -35,7 +36,7 @@ void main() {
       }
     });
 
-    testWidgets('should launche url when tappen activity cards', (tester) async {
+    testWidgets('should launche url when tap see source code btn', (tester) async {
       // Arrange
       final activitiesData = activities_data.activies;
       final launcher = UrlLauncherMock();
@@ -54,6 +55,25 @@ void main() {
       }
 
       await serviceLocator.reset();
+    });
+
+    testWidgets('should navigate to exercices_page when tap see more btn', (tester) async {
+      // Arrange
+      final activitiesData = activities_data.activies;
+
+      // Act
+      await tester.pumpWidget(const FlutterandoAppMock(view: ActivitiesPage()));
+
+      // Assert
+      for (final activity in activitiesData) {
+        await tester.scrollUntilVisible(find.byKey(ValueKey('activity_see_more_btn_${activity.id}')), 50);
+        await tester.pumpAndSettle();
+        await tester.tap(find.byKey(ValueKey('activity_see_more_btn_${activity.id}')));
+        await tester.pumpAndSettle();
+        expect(find.byType(ExercicesPage), findsOneWidget);
+        await tester.tap(find.byType(BackButton));
+        await tester.pumpAndSettle();
+      }
     });
   });
 }
