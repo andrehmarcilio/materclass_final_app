@@ -16,10 +16,13 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
         padding: const EdgeInsets.only(left: 16, right: 16, bottom: 4),
         child: Row(
           children: [
-            Image.asset(
-              assets.appLogo,
-              height: 48,
-              width: 48,
+            SizedBox.square(
+              dimension: 48,
+              child: Visibility(
+                visible: !Navigator.of(context).canPop(),
+                replacement: const BackButton(),
+                child: Image.asset(assets.appLogo),
+              ),
             ),
             const SizedBox(width: 4),
             Column(

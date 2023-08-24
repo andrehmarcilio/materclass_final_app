@@ -16,7 +16,7 @@ void main() {
         title: activityTitle,
         iconPath: icRunning,
         description: 'card description',
-        exercicesCount: 3,
+        exercices: [],
         repoUrl: 'repoUrl',
       );
 
@@ -41,7 +41,7 @@ void main() {
         title: 'activityTitle',
         iconPath: icRunning,
         description: activityDescription,
-        exercicesCount: 3,
+        exercices: [],
         repoUrl: 'repoUrl',
       );
 
@@ -70,7 +70,7 @@ void main() {
         title: 'activityTitle',
         iconPath: icRunning,
         description: 'activityDescription',
-        exercicesCount: 3,
+        exercices: [],
         repoUrl: 'repoUrl',
       );
 
@@ -101,7 +101,7 @@ void main() {
         title: 'activityTitle',
         iconPath: icRunning,
         description: 'activityDescription',
-        exercicesCount: 3,
+        exercices: [],
         repoUrl: 'repoUrl',
       );
 

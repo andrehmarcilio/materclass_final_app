@@ -51,7 +51,7 @@ class ActivityCard extends StatelessWidget {
               const SizedBox(width: 12),
               Text(activity.title, style: fonts.titleMedium),
               const Spacer(),
-              Text('Exercicios: ${activity.exercicesCount}', style: fonts.bodySmall),
+              Text('Exercicios: ${activity.exercices.length}', style: fonts.bodySmall),
             ],
           ),
           const SizedBox(height: 36),
@@ -83,6 +83,7 @@ class ActivityCard extends StatelessWidget {
                     ),
                     const Spacer(),
                     ElevatedButton(
+                      key: ValueKey('activity_see_more_btn_${activity.id}'),
                       onPressed: onTapSeeMore,
                       child: const Text('Ver mais'),
                     ),

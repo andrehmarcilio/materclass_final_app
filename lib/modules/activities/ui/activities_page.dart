@@ -4,6 +4,7 @@ import '../../../commons/widgets/my_app_bar.dart';
 import '../../../commons/widgets/sliver_gap.dart';
 import '../../../utils/service_locator/service_locator.dart';
 import '../../../utils/services/url_launcher.dart';
+import '../../exercices/ui/exercices_page.dart';
 import '../data/activities_data.dart' as activities_data;
 import 'widgets/activity_card.dart';
 
@@ -28,7 +29,9 @@ class ActivitiesPage extends StatelessWidget {
                 return ActivityCard(
                   activity: activity,
                   margin: const EdgeInsets.symmetric(horizontal: 16),
-                  onTapSeeMore: () {},
+                  onTapSeeMore: () {
+                    Navigator.of(context).push(ExercicesPage.pageRoute(activity: activity));
+                  },
                   onTapAccessCode: () {
                     final launcher = serviceLocator.get<UrlLauncher>();
                     launcher.launchUrl(activity.repoUrl);
