@@ -45,7 +45,7 @@ void main() {
 
     testWidgets('should display circular loading when githubReposState is loading', (tester) async {
       // Arrange
-      githubReposState.value = GithubReposLoading();
+      githubReposState.value = const GithubReposLoading();
       await tester.pumpAndSettle();
 
       // Act
@@ -58,7 +58,7 @@ void main() {
     testWidgets('should display error message when githubReposState is error', (tester) async {
       // Arrange
       const errorMessage = 'ERROR MESSAGE';
-      githubReposState.value = GithubReposError(errorMessage: errorMessage);
+      githubReposState.value = const GithubReposError(errorMessage: errorMessage);
       await tester.pumpAndSettle();
 
       // Act
