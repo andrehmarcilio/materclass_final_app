@@ -73,7 +73,11 @@ In this feature, users can view the list of my repositories in my gitHub profile
 The repository component must include:
 - title.
 - description.
-- number of commits.
+- repository size.
+
+<br />
+
+<img src="./screenshots/github_repos_page_screenshot.png" width="200"/>
 
 ## 1.4 Infos about me on a profile screen
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../modules/activities/ui/activities_page.dart';
+import '../modules/github_repos/github_repos_module.dart';
 import 'theme/theme.dart' as app_theme;
 
 class MasterclassApp extends StatelessWidget {
@@ -12,7 +12,7 @@ class MasterclassApp extends StatelessWidget {
       theme: app_theme.lightTheme,
       darkTheme: app_theme.darkTheme,
       themeMode: ThemeMode.dark,
-      home: const ActivitiesPage(),
+      home: const GithubReposModule(),
     );
   }
 }
