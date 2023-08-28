@@ -27,7 +27,10 @@ class _GithubReposModuleState extends State<GithubReposModule> with AppModule {
     });
 
     serviceLocator.registerSingleton<GithubReposReducer>(
-      GithubReposReducer(repositoriesService: serviceLocator.get()),
+      GithubReposReducer(
+        urlLauncher: serviceLocator.get(),
+        repositoriesService: serviceLocator.get(),
+      ),
       dispose: (githubReposReducer) {
         githubReposReducer.dispose();
       },

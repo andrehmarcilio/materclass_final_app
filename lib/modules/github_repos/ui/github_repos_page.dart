@@ -47,7 +47,7 @@ class _GithubReposPageState extends State<GithubReposPage> {
                 itemBuilder: (_, index) {
                   final repository = repositories[index];
 
-                  return RepositoryCard(
+                  return GithubRepoCard(
                     githubRepo: repository,
                     margin: const EdgeInsets.symmetric(horizontal: 16),
                   );

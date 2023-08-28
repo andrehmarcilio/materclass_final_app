@@ -24,10 +24,10 @@ void main() {
     testWidgets('should display repo cards with correct data when githubReposState is success', (tester) async {
       // Arrange
       final repos = <GithubRepo>[
-        GithubRepo(id: 1, size: 300, title: 'repo 1', description: 'description 1'),
-        GithubRepo(id: 2, size: 300, title: 'repo 2', description: 'description 2'),
-        GithubRepo(id: 3, size: 300, title: 'repo 3', description: 'description 3'),
-        GithubRepo(id: 4, size: 300, title: 'repo 4', description: 'description 4'),
+        GithubRepo(id: 1, size: 300, title: 'repo 1', description: 'description 1', url: 'url'),
+        GithubRepo(id: 2, size: 300, title: 'repo 2', description: 'description 2', url: 'url'),
+        GithubRepo(id: 3, size: 300, title: 'repo 3', description: 'description 3', url: 'url'),
+        GithubRepo(id: 4, size: 300, title: 'repo 4', description: 'description 4', url: 'url'),
       ];
       githubReposState.value = GithubReposSuccesssLoaded(repositories: repos);
       await tester.pumpAndSettle();

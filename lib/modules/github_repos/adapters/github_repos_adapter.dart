@@ -4,6 +4,7 @@ abstract class GithubRepoAdapter {
   static GithubRepo fromMap(dynamic map) {
     return GithubRepo(
       id: map['id'] as int,
+      url: map['svn_url'] as String,
       size: map['size'] as int,
       title: map['name'] as String,
       description: map['description'] ?? '',

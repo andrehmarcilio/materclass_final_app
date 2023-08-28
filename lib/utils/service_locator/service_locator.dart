@@ -49,5 +49,5 @@ class ServiceLocator {
 void initializeDependencies() {
   serviceLocator.registerSingleton<HttpClient>(HttpClientIMPL());
 
-  serviceLocator.registerFactory<UrlLauncher>(() => UrlLauncherIMPL());
+  serviceLocator.registerFactory<UrlLauncher>(UrlLauncherIMPL.new);
 }
