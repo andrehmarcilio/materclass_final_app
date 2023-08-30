@@ -89,6 +89,10 @@ Information displayed includes:
 - favorite programming tools.
 - skill level.
 
+<br />
+
+<img src="./screenshots/profile_page_screenshot.png" width="200"/>
+
 ## 1.5 Light and Dark brightness mode
 
 This feature provides users with the option to switch between light and dark brightness modes. The selected mode will be saved for the next time the user accesses the app.
