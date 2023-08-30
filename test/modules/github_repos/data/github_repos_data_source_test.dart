@@ -45,7 +45,7 @@ const mockedHttpSuccessAnswer = [
     'id': 487009611,
     'name': 'andrehmarcilio',
     'description': 'Config files for my GitHub profile.',
-    'url': 'https://api.github.com/repos/andrehmarcilio/andrehmarcilio',
+    'svn_url': 'https://api.github.com/repos/andrehmarcilio/andrehmarcilio',
     'size': 5,
   }
 ];
