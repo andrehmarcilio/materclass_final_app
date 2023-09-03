@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 
-import '../modules/profile/ui/profile_page.dart';
 import 'helpers/brightness_helper.dart';
 import 'interactor/app_reducer.dart';
+import 'router/root_router_delegate.dart';
 import 'theme/theme.dart' as app_theme;
 
 class MasterclassApp extends StatefulWidget {
@@ -15,6 +15,8 @@ class MasterclassApp extends StatefulWidget {
 }
 
 class _MasterclassAppState extends State<MasterclassApp> {
+  final rootRouter = RootRouterDelegate();
+
   @override
   void initState() {
     super.initState();
@@ -33,13 +35,13 @@ class _MasterclassAppState extends State<MasterclassApp> {
   Widget build(BuildContext context) {
     return ValueListenableBuilder(
       valueListenable: appStateAtom,
-      builder: (context, state, __) {
-        return MaterialApp(
+      builder: (context, appState, __) {
+        return MaterialApp.router(
           debugShowCheckedModeBanner: false,
           theme: app_theme.lightTheme,
           darkTheme: app_theme.darkTheme,
-          themeMode: state.brightness?.themeMode ?? ThemeMode.system,
-          home: const ProfilePage(),
+          themeMode: appState.brightness?.themeMode ?? ThemeMode.system,
+          routerDelegate: rootRouter,
         );
       },
     );
