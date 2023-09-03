@@ -10,6 +10,7 @@ void main() {
   late AppServiceMock appServiceMock;
   late AppReducer appReducer;
   setUp(() {
+    registerFallbackValue(Brightness.dark);
     appStateAtom.value = const AppState(Brightness.light);
     appServiceMock = AppServiceMock();
     appReducer = AppReducer(appService: appServiceMock);
@@ -20,6 +21,7 @@ void main() {
   });
   group('AppReducer Unit Tests |', () {
     test('should change the state brightness when added SwitchBrightnessMode event', () {
+      when(() => appServiceMock.savePreferedBrightnessMode(any())).thenAnswer((_) async {});
       final startAppStateBrightness = appStateAtom.value.brightness;
 
       appEventsAtom.add(SwitchBrightnessMode());
