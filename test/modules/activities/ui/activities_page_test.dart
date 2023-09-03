@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:masterclass_final_app/modules/activities/data/activities_data.dart' as activities_data;
+import 'package:masterclass_final_app/modules/activities/router/activities_router.dart';
 import 'package:masterclass_final_app/modules/activities/ui/activities_page.dart';
 import 'package:masterclass_final_app/modules/exercices/ui/exercices_page.dart';
 import 'package:masterclass_final_app/utils/service_locator/service_locator.dart';
@@ -62,15 +63,22 @@ void main() {
       final activitiesData = activities_data.activies;
 
       // Act
-      await tester.pumpWidget(const FlutterandoAppMock(view: ActivitiesPage()));
+      await tester.pumpWidget(const FlutterandoAppMock(view: ActivitiesRouter()));
 
       // Assert
       for (final activity in activitiesData) {
+        // Search for see more button
         await tester.scrollUntilVisible(find.byKey(ValueKey('activity_see_more_btn_${activity.id}')), 50);
         await tester.pumpAndSettle();
+
+        // Tap see more button
         await tester.tap(find.byKey(ValueKey('activity_see_more_btn_${activity.id}')));
         await tester.pumpAndSettle();
+
+        // Verify if navigate to ExercicesPage
         expect(find.byType(ExercicesPage), findsOneWidget);
+
+        // Go back to ActivitiesPage
         await tester.tap(find.byType(BackButton));
         await tester.pumpAndSettle();
       }

@@ -13,7 +13,9 @@ enum SvgAsset {
   icFlutter(assets.icFlutter),
   icDart(assets.icDart),
   icKotlin(assets.icKotlin),
-  icAndroid(assets.icAndroid);
+  icAndroid(assets.icAndroid),
+  icTarget(assets.icTarget),
+  icPerson(assets.icPerson);
 
   final String path;
 

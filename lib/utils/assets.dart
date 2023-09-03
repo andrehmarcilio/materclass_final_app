@@ -43,3 +43,9 @@ const icRunning = '${_iconsPath}ic_running.svg';
 
 /// Toys SVG Icon path
 const icToys = '${_iconsPath}ic_toys.svg';
+
+/// Target SVG Icon path
+const icTarget = '${_iconsPath}ic_target.svg';
+
+/// Person SVG Icon path
+const icPerson = '${_iconsPath}ic_person.svg';
