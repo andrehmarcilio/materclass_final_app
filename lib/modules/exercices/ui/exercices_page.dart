@@ -10,10 +10,6 @@ class ExercicesPage extends StatelessWidget {
 
   const ExercicesPage({required this.activity, super.key});
 
-  static MaterialPageRoute pageRoute({required Activity activity}) {
-    return MaterialPageRoute(builder: (context) => ExercicesPage(activity: activity));
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
