@@ -95,7 +95,11 @@ Information displayed includes:
 
 ## 1.5 Light and Dark brightness mode
 
-This feature provides users with the option to switch between light and dark brightness modes. The selected mode will be saved for the next time the user accesses the app.
+This feature provides users with the option to switch between light and dark brightness modes. The selected mode will be saved for the next time the user accesses the app. If a theme mode has not been selected, the app will automatically utilize the platform's brightness settings.
+
+<br />
+
+<img src="./screenshots/theme_mode_transition.gif" width="200"/>
 
 # 2 Architecture
 
