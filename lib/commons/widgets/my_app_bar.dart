@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../app/interactor/app_reducer.dart';
 import '../../utils/assets.dart' as assets;
 import '../../utils/extensions/context_extensions.dart';
 
@@ -40,9 +41,14 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
               ],
             ),
             const Spacer(),
-            SvgPicture.asset(
-              assets.icMoon,
-              colorFilter: ColorFilter.mode(context.colors.onSurface, BlendMode.srcIn),
+            IconButton(
+              onPressed: () {
+                appEventsAtom.add(SwitchBrightnessMode());
+              },
+              icon: SvgPicture.asset(
+                assets.icMoon,
+                colorFilter: ColorFilter.mode(context.colors.onSurface, BlendMode.srcIn),
+              ),
             ),
           ],
         ),

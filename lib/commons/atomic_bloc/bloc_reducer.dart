@@ -1,5 +1,8 @@
+import 'package:flutter/material.dart';
+
 import 'event_atom.dart';
-import 'state_atom.dart';
+
+part 'state_atom.dart';
 
 /// An abstract class that provides a framework for managing application state
 /// using a reducer pattern based on events.

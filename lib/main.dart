@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'app/masterclass_app.dart';
 import 'utils/service_locator/service_locator.dart';
 
-void main() {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  initializeDependencies();
+  await initializeDependencies();
   runApp(const MasterclassApp());
 }
