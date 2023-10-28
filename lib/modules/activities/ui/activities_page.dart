@@ -16,6 +16,7 @@ class ActivitiesPage extends StatelessWidget {
     return Scaffold(
       appBar: const MyAppBar(
         title: 'Atividades',
+        showBackButton: false,
       ),
       body: CustomScrollView(
         slivers: [

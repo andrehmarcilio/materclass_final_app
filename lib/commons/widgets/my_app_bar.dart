@@ -7,8 +7,15 @@ import '../../utils/extensions/context_extensions.dart';
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
+  final bool? showBackButton;
+  final VoidCallback? onBackPressed;
 
-  const MyAppBar({required this.title, super.key});
+  const MyAppBar({
+    required this.title,
+    this.showBackButton,
+    this.onBackPressed,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +27,8 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
             SizedBox.square(
               dimension: 48,
               child: Visibility(
-                visible: !Navigator.of(context).canPop(),
-                replacement: const BackButton(),
+                visible: !(showBackButton ?? Navigator.of(context).canPop()),
+                replacement: BackButton(onPressed: onBackPressed),
                 child: Image.asset(assets.appLogo),
               ),
             ),

@@ -7,8 +7,12 @@ import '../../../../masterclass_app_mock.dart';
 void main() {
   group('ExerciceCard Widget Tests |', () {
     testWidgets('should display the exercice title', (tester) async {
-      final exercice = Exercice(id: 1, title: 'Animation', routePath: '/animation');
-      final view = ExerciceCard(exercice: exercice, index: 1);
+      final exercice = FlutterExercice(id: 1, title: 'Animation', routePath: '/animation');
+      final view = ExerciceCard(
+        exercice: exercice,
+        number: 1,
+        onTap: () {},
+      );
 
       await tester.pumpWidget(FlutterandoAppMock(view: view));
 
@@ -17,8 +21,12 @@ void main() {
 
     testWidgets('should display the exercice index', (tester) async {
       const index = 1;
-      final exercice = Exercice(id: 1, title: 'Animation', routePath: '/animation');
-      final view = ExerciceCard(exercice: exercice, index: index);
+      final exercice = FlutterExercice(id: 1, title: 'Animation', routePath: '/animation');
+      final view = ExerciceCard(
+        exercice: exercice,
+        number: index,
+        onTap: () {},
+      );
 
       await tester.pumpWidget(FlutterandoAppMock(view: view));
 
