@@ -1,5 +1,9 @@
 include: package:flutter_lints/flutter.yaml
 
+analyser:
+  errors:
+    invalid_use_of_visible_for_testing_member: error
+
 linter:
   rules:
     file_names: true 

@@ -4,26 +4,29 @@ import 'package:google_fonts/google_fonts.dart';
 import 'colors.dart' as app_colors;
 
 final darkTextTheme = TextTheme(
-  displayLarge: GoogleFonts.poppins(
+  titleLarge: GoogleFonts.poppins(
     fontSize: 20,
     fontWeight: FontWeight.w600,
-    color: app_colors.white,
   ),
-  displayMedium: GoogleFonts.poppins(
+  titleMedium: GoogleFonts.poppins(
     fontSize: 16,
     fontWeight: FontWeight.w600,
-    color: app_colors.white,
+  ),
+  titleSmall: GoogleFonts.poppins(
+    fontSize: 12,
+    fontWeight: FontWeight.w500,
   ),
   bodyLarge: GoogleFonts.montserrat(
     fontSize: 14,
     fontWeight: FontWeight.normal,
-    color: app_colors.gray,
   ),
   bodySmall: GoogleFonts.montserrat(
     fontSize: 12,
     fontWeight: FontWeight.normal,
-    color: app_colors.gray,
   ),
+).apply(
+  displayColor: app_colors.white,
+  bodyColor: app_colors.white,
 );
 
 final lightTextTheme = darkTextTheme.apply(

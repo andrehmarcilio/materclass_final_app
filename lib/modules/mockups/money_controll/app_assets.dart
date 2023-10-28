@@ -1,0 +1,1 @@
+const googleIconPath = 'assets/icons/google-icon.png';

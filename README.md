@@ -56,6 +56,8 @@ The activitie component must has:
 
 OBS: The data in this Screen is mocked, so no external requests are made.
 
+<img src="./screenshots/activity_page_screenshot.png" width="200"/>
+
 ## 1.2 List of exercices for each activity (with examples)
 
 A screen that shows the user a List of exercices in the selected activitie. Each exercice is a clickable component. Tapping on an exercise navigates to the example screen.
@@ -71,7 +73,11 @@ In this feature, users can view the list of my repositories in my gitHub profile
 The repository component must include:
 - title.
 - description.
-- number of commits.
+- repository size.
+
+<br />
+
+<img src="./screenshots/github_repos_page_screenshot.png" width="200"/>
 
 ## 1.4 Infos about me on a profile screen
 
@@ -83,9 +89,17 @@ Information displayed includes:
 - favorite programming tools.
 - skill level.
 
+<br />
+
+<img src="./screenshots/profile_page_screenshot.png" width="200"/>
+
 ## 1.5 Light and Dark brightness mode
 
-This feature provides users with the option to switch between light and dark brightness modes. The selected mode will be saved for the next time the user accesses the app.
+This feature provides users with the option to switch between light and dark brightness modes. The selected mode will be saved for the next time the user accesses the app. If a theme mode has not been selected, the app will automatically utilize the platform's brightness settings.
+
+<br />
+
+<img src="./screenshots/theme_mode_transition.gif" width="200"/>
 
 # 2 Architecture
 
