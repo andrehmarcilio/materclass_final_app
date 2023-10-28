@@ -46,6 +46,11 @@ class ActivitiesRouterDelegate extends RouterDelegate<ActivitiesRouterConfigurat
 
   bool _handlePopPage(Route<dynamic> route, dynamic result) {
     final success = route.didPop(result);
+    final otherRouterCanHandle = !success;
+
+    if (otherRouterCanHandle) return false;
+
+    if (routerConfiguration.selectedActivity != null) unselectActivity();
 
     return success;
   }
