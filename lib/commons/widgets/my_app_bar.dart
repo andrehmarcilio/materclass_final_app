@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../app/interactor/app_atoms.dart';
 import '../../app/interactor/app_reducer.dart';
 import '../../utils/assets.dart' as assets;
 import '../../utils/extensions/context_extensions.dart';

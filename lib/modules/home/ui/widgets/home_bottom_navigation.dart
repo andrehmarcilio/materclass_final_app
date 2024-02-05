@@ -43,7 +43,11 @@ class HomeBottomNavigation extends StatelessWidget {
         ),
       );
       if (i < items.length - 1) {
-        tiles.add(const VerticalDivider(thickness: .6));
+        tiles.add(const VerticalDivider(
+          indent: 16,
+          endIndent: 16,
+          thickness: .2,
+        ));
       }
     }
     return tiles;
