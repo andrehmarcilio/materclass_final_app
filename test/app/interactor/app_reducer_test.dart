@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:masterclass_final_app/app/interactor/app_atoms.dart';
 import 'package:masterclass_final_app/app/interactor/app_reducer.dart';
 import 'package:masterclass_final_app/app/interactor/app_service.dart';
 import 'package:mocktail/mocktail.dart';

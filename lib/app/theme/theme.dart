@@ -42,5 +42,7 @@ final _elevationButtonTheme = ElevatedButtonThemeData(
         borderRadius: BorderRadius.circular(40),
       ),
     ),
+    backgroundColor: const MaterialStatePropertyAll(app_colors.blue),
+    foregroundColor: const MaterialStatePropertyAll(app_colors.white),
   ),
 );
