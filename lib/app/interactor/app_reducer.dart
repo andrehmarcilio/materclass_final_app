@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../../commons/atomic_bloc/bloc_reducer.dart';
-import '../../commons/atomic_bloc/event_atom.dart';
+import '../../utils/atomic_bloc/bloc_reducer.dart';
 import '../helpers/brightness_helper.dart';
+import 'app_atoms.dart';
 import 'app_service.dart';
 
-part 'app_atoms.dart';
 part 'app_events.dart';
 part 'app_state.dart';
 

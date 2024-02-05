@@ -1,4 +1,4 @@
-import '../../../commons/atomic_bloc/bloc_reducer.dart';
+import '../../../utils/atomic_bloc/bloc_reducer.dart';
 import '../../../utils/services/url_launcher.dart';
 import 'github_repos_atoms.dart';
 import 'github_repos_events.dart';

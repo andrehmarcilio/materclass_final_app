@@ -3,6 +3,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 
 import 'helpers/brightness_helper.dart';
+import 'interactor/app_atoms.dart';
 import 'interactor/app_reducer.dart';
 import 'router/root_router_delegate.dart';
 import 'theme/theme.dart' as app_theme;
