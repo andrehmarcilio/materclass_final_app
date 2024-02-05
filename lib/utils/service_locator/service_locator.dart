@@ -38,7 +38,7 @@ class ServiceLocator {
   }
 
   void pushNewScope(void Function(ServiceLocator)? init) {
-    _provider.pushNewScope(init: (_) => init?.call(serviceLocator));
+    _provider.pushNewScope(init: (_) => init?.call(this));
   }
 
   Future<void> popScope() async {
